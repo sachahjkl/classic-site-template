@@ -1,10 +1,12 @@
-# Builds the site (node build.mjs, which fails on a broken link) and deploys dist/ to GitHub Pages.
-# Pages needs a public repository, or a paid plan for a private one; Settings > Pages > Source: GitHub Actions.
+# Builds the site (node build.mjs, which fails on a broken link) on every push and pull request, and deploys dist/ to
+# GitHub Pages from master. Pages needs a public repository, or a paid plan for a private one (Settings > Pages >
+# Source: GitHub Actions); while the repository is private the build still runs and the deployment is skipped.
 name: Pages
 
 on:
   push:
     branches: [master]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -14,7 +16,7 @@ permissions:
 
 # one deployment at a time; a newer push does not cancel one that is running
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -26,17 +28,19 @@ jobs:
         with:
           node-version: 22
       - run: node build.mjs
-      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
+        if: github.ref == 'refs/heads/master' && !github.event.repository.private
         with:
           path: dist
 
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/master' && !github.event.repository.private
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/configure-pages@v6
       - id: deployment
         uses: actions/deploy-pages@v5
