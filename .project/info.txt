@@ -1,0 +1,2 @@
+name=classic-site-template
+description=A template for a project website in the classic style: one screen, plain links, a NEWS column, no JavaScript
