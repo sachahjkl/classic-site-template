@@ -1,0 +1,12 @@
+name: "classic-site-template"
+description: "A template for a project website in the classic style: one screen, plain links, a NEWS column, no JavaScript"
+topics:
+  - "template"
+  - "vitrine"
+  - "github-pages"
+  - "html"
+homepage: "https://sachahjkl.github.io/classic-site-template"
+source:
+  provider: github
+  namespace: "sachahjkl"
+  path: "sachahjkl/classic-site-template"
