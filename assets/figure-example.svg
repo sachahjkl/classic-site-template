@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- An example figure for the logo (site.json: "logo": { "figure": "assets/figure-example.svg" }): white shapes in
+       the 512-unit square of logo.mjs, the rounded square itself spanning 56 to 456. What it may hold: self-closing
+       <rect x y width height rx>, <circle cx cy r>, <ellipse cx cy rx ry>, <polygon points> and <path d> (M L H V C Q Z),
+       with fill (white by default, black, #rgb or #rrggbb), fill-rule="evenodd", and data-min-detail="1" or "2" to keep
+       a shape off the small sizes (1: from 32 px, 2: from 64 px); no transform. -->
+  <rect x="146" y="166" width="220" height="44" rx="22"/>
+  <rect x="146" y="246" width="160" height="44" rx="22"/>
+  <rect x="146" y="326" width="200" height="44" rx="22" data-min-detail="1"/>
+  <circle cx="380" cy="348" r="14" data-min-detail="2"/>
+</svg>

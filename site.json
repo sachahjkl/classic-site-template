@@ -1,0 +1,30 @@
+{
+  "name": "Example project",
+  "tagline": "a fictional tool that shows what this template looks like",
+  "description": "Example project is placeholder content for the classic site template: replace it with your own.",
+  "lang": "en",
+  "logo": { "variant": "amber", "notch": true, "figure": "empty" },
+  "nav": [
+    { "label": "home", "href": "index.html" },
+    { "label": "about", "href": "about.html" },
+    { "label": "docs", "href": "docs.html" },
+    { "label": "download", "href": "download.html" },
+    { "label": "news", "href": "news.html" },
+    { "label": "source code", "href": "https://github.com/your-name/example-project" }
+  ],
+  "footer": {
+    "text": "Example project is made by Your Name.",
+    "links": [
+      { "label": "about", "href": "about.html" },
+      { "label": "news", "href": "news.html" },
+      { "label": "contact", "href": "about.html#contact" }
+    ]
+  },
+  "facts": [
+    { "number": "1.2", "unit": "MB", "text": "the download, everything included" },
+    { "number": "40", "unit": "ms", "text": "from launch to the first window (a made-up number)" },
+    { "number": "3", "unit": "", "text": "platforms: Windows, Linux and macOS" },
+    { "number": "0", "unit": "", "text": "dependencies to install" }
+  ],
+  "modern": ""
+}
