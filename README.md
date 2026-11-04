@@ -35,7 +35,7 @@ cookie banner, no web fonts, no framework.
      home; every other file becomes a page of the same name (`about.html`, `docs.html`, `download.html` are examples).
      A page's title is its first `<h1>`. `<!-- facts -->` in a page puts the facts table there.
    - `assets/`: images your pages use, copied into the site as they are.
-3. Push to `main`. The workflow `.github/workflows/pages.yml` builds the site and deploys it to GitHub Pages
+3. Push to `master`. The workflow `.github/workflows/pages.yml` builds the site and deploys it to GitHub Pages
    (Settings > Pages > Source: GitHub Actions). Pages needs a public repository, or a paid plan for a private one.
 
 Everything in this repository's `site.json`, `news/` and `pages/` is example content about a fictional "Example
@@ -107,7 +107,7 @@ otherwise (the workflow then does not deploy). Open `dist/index.html` in a brows
 | `theme/classic.css` | the style, its colours and fonts as tokens at the top |
 | `build.mjs` | the build and the link check |
 | `logo.mjs` | the logo and favicons |
-| `.github/workflows/pages.yml` | builds and deploys to GitHub Pages on every push to `main` |
+| `.github/workflows/pages.yml` | builds and deploys to GitHub Pages on every push to `master` |
 | `docs/` | the pictures of this README |
 
 ## Licence
